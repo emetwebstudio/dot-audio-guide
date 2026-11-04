@@ -1,0 +1,9 @@
+*.exe
+*.dll
+*.zip
+*.csv
+*.log
+*.xml
+.env*
+private-config-backup/
+vendor-downloads/
