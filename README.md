@@ -1,8 +1,8 @@
-# Audio for Dots — Bring Your AI into Discord Conversations
+# ChatGPT Dots for Discord — Business Calls and Live Video Audio
 
-**Give Jarvis a voice in the call: hear the people, discuss the work, and listen to live video audio together.**
+**Give ChatGPT dots a voice in the call: hear the people, discuss the work, and listen to live video audio together.**
 
-A Windows audio-routing guide for making an AI dot part of a shared conversation. The main use case is **business and collaboration through Discord**: letting callers speak directly with Jarvis and hear its replies, while Jarvis can also hear the audio from live videos and other computer applications.
+A Windows audio-routing guide for making an AI dot part of a shared conversation. The main use case is **business and collaboration through Discord**: letting callers speak directly with ChatGPT dots and hear their replies, while ChatGPT dots can also hear the audio from live videos and other computer applications.
 
 Powered by **Voicemeeter Banana + VB-Audio cables**. Includes the routing diagram, exact device choices, sharing modes and practical troubleshooting.
 
@@ -10,24 +10,24 @@ Powered by **Voicemeeter Banana + VB-Audio cables**. Includes the routing diagra
 
 ## Why I made this
 
-I made this so Jarvis could communicate with the people I call on Discord—mainly for business, not just gaming. I wanted it to hear the conversation, respond to callers, and listen to live video audio with us, rather than depend on me relaying everything back and forth.
+I made this so ChatGPT dots could communicate with the people I call on Discord—mainly for business, not just gaming. I wanted them to hear the conversation, respond to callers, and listen to live video audio with us, rather than depend on me relaying everything back and forth.
 
 Another goal is communication with other dots through the same shared voice environment. This guide provides an audio-routing foundation for that idea; dot-to-dot conversations and turn-taking have not been validated here, and no agent-to-agent messaging protocol is included.
 
-The practical challenge is deciding who hears what. Jarvis needs the microphone, Discord callers and computer audio. Callers need the intended reply without hearing their own voices returned. Local listening still needs to work. This project makes those paths explicit and turns the setup experience into steps other people can reproduce.
+The practical challenge is deciding who hears what. ChatGPT dots need the microphone, Discord callers and computer audio. Callers need the intended reply without hearing their own voices returned. Local listening still needs to work. This project makes those paths explicit and turns the setup experience into steps other people can reproduce.
 
 **VB-Audio provides the mixing engine and virtual devices.** The contribution here is the integration guide, routing model, tests and troubleshooting. It is not a replacement for Voicemeeter or an official OpenAI integration; a custom setup companion is not included.
 
 ## Conversations this is designed to support
 
-- **Business calls:** bring Jarvis into a discussion with collaborators so people can address it directly and hear the response.
-- **Live video listening:** let Jarvis hear the audio from a presentation, broadcast or video and discuss what was said. This routes sound; it does not provide video frames or screen vision.
+- **Business calls:** bring ChatGPT dots into a discussion with collaborators so people can address them directly and hear the response.
+- **Live video listening:** let ChatGPT dots hear the audio from a presentation, broadcast or video and discuss what was said. This routes sound; it does not provide video frames or screen vision.
 - **Shared work:** discuss a proposal, idea or problem while participants and the dot hear the same relevant computer audio.
 - **Other dots:** explore voice interaction with another dot in a shared call. This remains an intended use case requiring its own routing and conversation tests.
 
 ## Try the workflow
 
-1. Explain a question or business problem to Jarvis, then have another Discord caller address it directly.
+1. Explain a question or business problem to ChatGPT dots, then have another Discord caller address them directly.
 2. Play a live video or a short clip and ask about something audible in it.
 3. Confirm that callers can hear the reply clearly and do not hear their own voices returned.
 
