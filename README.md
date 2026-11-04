@@ -1,46 +1,39 @@
-# ChatGPT Dots for Discord — Put AI in the Conversation
+# ChatGPT Dots — Shared Conversations & Computer Audio
 
-**Your ChatGPT dots. Everyone's conversation.**
+**Let other people talk to your ChatGPT dots. Let your ChatGPT dots hear your computer.**
 
-**Let other people in your Discord call speak directly to your ChatGPT dots, ask follow-up questions and hear the replies—just as you do.**
+Two abilities, a wide range of uses:
 
-Turn a Discord business call into a conversation with an AI participant. Your collaborators can address your dots themselves: ask about an idea, work through a problem, or discuss what was said in a live video. You do not have to relay every question or repeat every answer.
+| Ability | What it opens up |
+| --- | --- |
+| **Shared conversations** | Friends, collaborators and other callers can address your ChatGPT dots directly, ask their own questions and hear the replies—just as you can. |
+| **Computer-audio listening** | Your ChatGPT dots can hear the audio from live videos, presentations, tutorials, music and other applications routed into their input. |
 
-The goal is shared access to the conversation: **one host's ChatGPT dots, available by voice to the people in the call.** This guide connects the host's microphone, Discord callers and computer audio to the AI, then provides a separate reply path back to the callers.
+The idea is to make your dots part of what people are discussing and hearing. A business call, a shared work session or a live video can become a conversation with an AI participant. You do not have to relay every question or repeat everything playing on the computer.
 
-Built for **business conversations, collaboration and live video listening**. Powered by **Voicemeeter Banana + VB-Audio cables**, with exact settings, a routing diagram and practical troubleshooting.
+**Discord is the call application used in the tested setup below. It is an example of the shared-conversation use case, not the definition of the project.** The published instructions currently cover Windows, Discord and Voicemeeter Banana; other call apps and voice clients need their own routing checks.
 
-[Set it up](#setup) · [Understand the routing](#routing) · [Test a conversation](#verify-it) · [Troubleshoot](#troubleshooting)
+[Set it up](#setup) · [Understand the routing](#routing) · [Test both abilities](#verify-it) · [Troubleshoot](#troubleshooting)
 
 ## Why I made this
 
-I made this because I wanted the people in my Discord calls to be able to use my ChatGPT dots conversationally, just as I can. They should be able to speak directly to the dots, ask their own questions and hear the answers. My main purpose is business and collaboration: making AI part of the discussion while it can also listen to live video audio with us.
+I wanted two things: for other people to be able to talk directly to my ChatGPT dots, and for my ChatGPT dots to hear the audio on my computer. Those abilities are useful far beyond gaming—business discussions, collaboration, shared learning and listening to live videos are all reasons I wanted this working.
 
-Another goal is communication with other dots through the same shared voice environment. This guide provides an audio-routing foundation for that idea; dot-to-dot conversations and turn-taking have not been validated here, and no agent-to-agent messaging protocol is included.
+Other people should be able to use the dots conversationally, just as I can, without me acting as the middleman. And when something relevant is playing on the computer, the dots should be able to hear it as part of the discussion.
 
-The practical challenge is deciding who hears what. ChatGPT dots need the microphone, Discord callers and computer audio. Callers need the intended reply without hearing their own voices returned. Local listening still needs to work. This project makes those paths explicit and turns the setup experience into steps other people can reproduce.
+**Voicemeeter Banana and VB-Audio cables provide the current mixing engine and virtual devices.** This project's contribution is the reproducible routing guide, tested setup, diagram and troubleshooting. It is not an official OpenAI integration or a standalone mixer; a custom setup companion is not included.
 
-**VB-Audio provides the mixing engine and virtual devices.** The contribution here is the integration guide, routing model, tests and troubleshooting. It is not a replacement for Voicemeeter or an official OpenAI integration; a custom setup companion is not included.
+## Try the two abilities
 
-### What shared access means
+1. **Someone else talks to your dots:** have another caller ask a question while you stay quiet, then ask a follow-up and listen to the reply directly.
+2. **Your dots hear computer audio:** play a short video or live audio segment and ask about something audible in it.
+3. **Combine them:** discuss that audio together, with you, the other caller and the dots participating in the same conversation.
 
-This is shared voice interaction through the host's setup. Account access, private context and tool permissions are separate from audio routing and remain governed by the host's dot configuration. The guide does not claim equal account privileges for everyone in the call.
+A combined-input test covered the host, a Discord caller and video audio on one Windows setup. Other applications, every live-video service and business-task accuracy are not established by that test. See [what has actually been tested](#what-has-actually-been-tested).
 
-## Conversations this is designed to support
+### Scope
 
-- **Business calls:** bring ChatGPT dots into a discussion with collaborators so people can address them directly and hear the response.
-- **Live video listening:** let ChatGPT dots hear the audio from a presentation, broadcast or video and discuss what was said. This routes sound; it does not provide video frames or screen vision.
-- **Shared work:** discuss a proposal, idea or problem while participants and the dot hear the same relevant computer audio.
-- **Other dots:** explore voice interaction with another dot in a shared call. This remains an intended use case requiring its own routing and conversation tests.
-
-## Try the workflow
-
-1. Have another Discord caller ask your ChatGPT dots a question while you stay quiet. The caller should hear the answer directly.
-2. Have that caller ask a follow-up, then join the conversation yourself. No relaying through the host should be needed.
-3. Play a live video or a short clip and ask about something audible in it.
-4. Confirm that callers hear the replies clearly and do not hear their own voices returned.
-
-The recorded combined-input test covered two people and video audio on one Windows setup. It did not establish business-task accuracy, every live-video service or dot-to-dot reliability. See [what has actually been tested](#what-has-actually-been-tested).
+This routes audio, not video frames or screen vision. Shared conversation access does not define account access, private context or tool permissions; those remain governed by the host's dot configuration. Dot-to-dot voice communication is another exploration goal, not a validated agent-to-agent protocol in this guide.
 
 ## What this enables
 
