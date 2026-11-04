@@ -1,32 +1,43 @@
-# Audio for Dots — ChatGPT + Discord Audio on Windows
+# Audio for Dots — Bring Your AI into Discord Conversations
 
-**Let your dot hear you, your Discord friends and computer audio—and reply back into the conversation.**
+**Give Jarvis a voice in the call: hear the people, discuss the work, and listen to live video audio together.**
 
-A practical Windows audio-routing project using **Voicemeeter Banana + VB-Audio cables**. Includes the routing diagram, exact device choices, two sharing modes and fixes for the problems encountered along the way.
+A Windows audio-routing guide for making an AI dot part of a shared conversation. The main use case is **business and collaboration through Discord**: letting callers speak directly with Jarvis and hear its replies, while Jarvis can also hear the audio from live videos and other computer applications.
 
-[Get started](#setup) · [See the routing](#routing) · [Run the tests](#verify-it) · [Fix missing audio](#troubleshooting)
+Powered by **Voicemeeter Banana + VB-Audio cables**. Includes the routing diagram, exact device choices, sharing modes and practical troubleshooting.
 
-## Why I put this together
+[Set it up](#setup) · [Understand the routing](#routing) · [Test a conversation](#verify-it) · [Troubleshoot](#troubleshooting)
 
-I wanted my dot to participate in the same conversation as my friends and react to what we were playing on the computer. This guide grew out of getting those paths working together on my Windows setup, then turning that experience into something other people could reproduce.
+## Why I made this
 
-The hard part was separating what the AI hears, what friends hear and what I hear locally. A wrong input can hide the microphone; a wrong return can feed someone's voice back to them. The guide makes those paths explicit and tests each one separately.
+I made this so Jarvis could communicate with the people I call on Discord—mainly for business, not just gaming. I wanted it to hear the conversation, respond to callers, and listen to live video audio with us, rather than depend on me relaying everything back and forth.
 
-**VB-Audio provides the mixing engine and virtual devices.** This project's contribution is the documented integration, routing model, practical tests and troubleshooting. It is a guide today; a custom setup companion is not included. It is an independent community project, not an official OpenAI integration.
+Another goal is communication with other dots through the same shared voice environment. This guide provides an audio-routing foundation for that idea; dot-to-dot conversations and turn-taking have not been validated here, and no agent-to-agent messaging protocol is included.
 
-## Try the conversation
+The practical challenge is deciding who hears what. Jarvis needs the microphone, Discord callers and computer audio. Callers need the intended reply without hearing their own voices returned. Local listening still needs to work. This project makes those paths explicit and turns the setup experience into steps other people can reproduce.
 
-1. Talk to your dot, then have a Discord friend ask it a question.
-2. Play a short video and ask the dot about something audible in it.
-3. Have your friend check the spoken reply and confirm they do not hear themselves returned.
+**VB-Audio provides the mixing engine and virtual devices.** The contribution here is the integration guide, routing model, tests and troubleshooting. It is not a replacement for Voicemeeter or an official OpenAI integration; a custom setup companion is not included.
 
-The combined-input workflow was tested on one Windows setup. Full details and limits are in [what has actually been tested](#what-has-actually-been-tested). This carries audio; it does not provide screen vision.
+## Conversations this is designed to support
+
+- **Business calls:** bring Jarvis into a discussion with collaborators so people can address it directly and hear the response.
+- **Live video listening:** let Jarvis hear the audio from a presentation, broadcast or video and discuss what was said. This routes sound; it does not provide video frames or screen vision.
+- **Shared work:** discuss a proposal, idea or problem while participants and the dot hear the same relevant computer audio.
+- **Other dots:** explore voice interaction with another dot in a shared call. This remains an intended use case requiring its own routing and conversation tests.
+
+## Try the workflow
+
+1. Explain a question or business problem to Jarvis, then have another Discord caller address it directly.
+2. Play a live video or a short clip and ask about something audible in it.
+3. Confirm that callers can hear the reply clearly and do not hear their own voices returned.
+
+The recorded combined-input test covered two people and video audio on one Windows setup. It did not establish business-task accuracy, every live-video service or dot-to-dot reliability. See [what has actually been tested](#what-has-actually-been-tested).
 
 ## What this enables
 
 - Talk to your dot while it also hears people in your Discord call.
 - Let it hear videos, music and other apps using Windows default playback.
-- Send the dot's spoken replies to your friends without sending those replies back into its own input.
+- Send the dot's spoken replies to your callers without sending those replies back into its own input.
 - Keep listening locally through your audio interface or headphones.
 
 This carries audio. It does not give the dot video frames or screen vision.
