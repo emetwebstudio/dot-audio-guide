@@ -1,8 +1,26 @@
-# Audio for Dots: Discord, Computer Sound and Voice
+# Audio for Dots — ChatGPT + Discord Audio on Windows
 
-A practical Windows routing guide for giving a ChatGPT dot a combined audio input: your microphone, Discord friends and computer playback, with a separate reply path back to your friends.
+**Let your dot hear you, your Discord friends and computer audio—and reply back into the conversation.**
 
-**Voicemeeter Banana does the mixing.** This project documents a working configuration; it is not a standalone mixer, a virtual audio driver, an official OpenAI integration, or a finished setup assistant. No audio software or drivers are bundled.
+A practical Windows audio-routing project using **Voicemeeter Banana + VB-Audio cables**. Includes the routing diagram, exact device choices, two sharing modes and fixes for the problems encountered along the way.
+
+[Get started](#setup) · [See the routing](#routing) · [Run the tests](#verify-it) · [Fix missing audio](#troubleshooting)
+
+## Why I put this together
+
+I wanted my dot to participate in the same conversation as my friends and react to what we were playing on the computer. This guide grew out of getting those paths working together on my Windows setup, then turning that experience into something other people could reproduce.
+
+The hard part was separating what the AI hears, what friends hear and what I hear locally. A wrong input can hide the microphone; a wrong return can feed someone's voice back to them. The guide makes those paths explicit and tests each one separately.
+
+**VB-Audio provides the mixing engine and virtual devices.** This project's contribution is the documented integration, routing model, practical tests and troubleshooting. It is a guide today; a custom setup companion is not included. It is an independent community project, not an official OpenAI integration.
+
+## Try the conversation
+
+1. Talk to your dot, then have a Discord friend ask it a question.
+2. Play a short video and ask the dot about something audible in it.
+3. Have your friend check the spoken reply and confirm they do not hear themselves returned.
+
+The combined-input workflow was tested on one Windows setup. Full details and limits are in [what has actually been tested](#what-has-actually-been-tested). This carries audio; it does not provide screen vision.
 
 ## What this enables
 
@@ -99,6 +117,7 @@ That is evidence for this setup, not a compatibility guarantee. Sustained stream
 | Friends hear no music | Check the selected delivery mode: B2 for voice sharing, stream audio for streaming. |
 | You hear no computer sound | Banana must be running; A1 and the program strip must be enabled and point to your headphones/interface. |
 | Quiet dot reply | Check the dot's actual output device, app volume and its dedicated Banana strip; avoid raising every source together. |
+| Banana opens but Apollo A1 stays blank | Match Banana's 32/64-bit build to the installed ASIO driver; the tested Apollo USB setup required Banana 64-bit. |
 | Duplicate music/reply | Check whether both B2 and the screen stream are carrying it. |
 
 ## Project status
@@ -106,3 +125,7 @@ That is evidence for this setup, not a compatibility guarantee. Sustained stream
 This first publication is a guide. A polished setup/control companion is planned, not included. No custom mixer executable, installer, private device preset, session log, credential or vendor binary is included. No project license has been selected yet; third-party products retain their own terms.
 
 Independent, unofficial community project. No affiliation with or endorsement by OpenAI, Discord or VB-Audio is implied.
+
+## Help improve the guide
+
+If this helped, star the repository so you can find it again. To report a problem or add a confirmed setup, [open an issue](https://github.com/emetwebstudio/dot-audio-guide/issues) with your Windows version, audio interface, sharing mode and which test failed. Share reproducible steps rather than personal device logs or credentials.
